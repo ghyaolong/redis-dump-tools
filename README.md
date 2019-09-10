@@ -3,14 +3,13 @@ Redis 数据迁移工具：
 支持阿里云的Redis数据库服务和自建Redis Server。
 
 数据导出：
-java -cp redis-tools.jar RedisDumper -h 127.0.0.1 -p 6379 -a password -i 0 -d /usr/local/redis_data/data.txt
+java -cp redis-tools.jar RedisDumper -h 127.0.0.1 -p 6379 -a password  -f /usr/local/redis_data/
 
 数据导入:
-java -cp redis-tools.jar RedisLoader -h 127.0.0.1 -p 6379 -a password -i 0 -d /usr/local/redis_data/data.txt
+java -cp redis-tools.jar RedisLoader -h 127.0.0.1 -p 6379 -a password  -f /usr/local/redis_data/
 
 参数说明：
 -h Redis Server IP
 -p Redis端口，默认6379
 -a Redis密码，默认为空
--i Redis DB Index
--d 数据文件路径
+-f 数据文件路径 
